@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Admin Login</title>
+	<link rel="stylesheet" type="text/css" >
+</head>
+<body>
+	<div class="login-box">
+		<img src="../IMAGES/Admin-Icon.png" class="admin-icon">
+		<h1>Admin Login</h1><br><br>
+
+		  <form  [formGroup]="loginForm">
+
+	        <p>Username</p><br>
+			<input type="text" name="username" placeholder="Enter Username" formControlName="email">
+			<p>Password</p><br>
+			<input type="password" name="password" placeholder="Enter Password"formControlName="password">
+			<input type="submit" name="submit" value="Login"(click)="login()">
+		</form>
+	</div>
+</body>
+</html>
+
