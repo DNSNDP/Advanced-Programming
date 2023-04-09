@@ -16,6 +16,8 @@ public class Customers {
     public String email;
     @Column(name="name")
     public String name;
+    @Column(name="installement")
+    public String installment;
 
     @Column(name="dateOfBirth")
     public String dateOfBirth;
@@ -105,18 +107,21 @@ public class Customers {
         this.password = password;
     }
 
-    @Override
-    public String toString() {
-        return "Customers{" +
-                "id=" + id +
-                ", email='" + email + '\'' +
-                ", name='" + name + '\'' +
-                ", dateOfBirth='" + dateOfBirth + '\'' +
-                ", loanBalance=" + loanBalance +
-                ", budget=" + budget +
-                ", usedAmount=" + usedAmount +
-                ", password='" + password + '\'' +
-                ", installmentPlan=" + installmentPlan +
-                '}';
-    }
+    public String getInstallment() {
+		return installment;
+	}
+
+	public void setInstallment(String installment) {
+		this.installment = installment;
+	}
+
+	@Override
+	public String toString() {
+		return "Customers [id=" + id + ", email=" + email + ", name=" + name + ", installment=" + installment
+				+ ", dateOfBirth=" + dateOfBirth + ", loanBalance=" + loanBalance + ", budget=" + budget
+				+ ", usedAmount=" + usedAmount + ", password=" + password + ", installmentPlan=" + installmentPlan
+				+ "]";
+	}
+
+	
 }

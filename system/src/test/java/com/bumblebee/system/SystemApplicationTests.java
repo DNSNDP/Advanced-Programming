@@ -8,22 +8,24 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
+import com.bumblebee.system.model.Customers;
 import com.bumblebee.system.model.Product;
+import com.bumblebee.system.service.CustomerService;
 import com.bumblebee.system.service.ProductService;
 
 @SpringBootTest
 class TestloginAdmin {
 
+
 @Autowired
-AuthController authController;
+CustomerService customerService;
 
 	@Test
 	void Test() {
-//		LoginRequest loginRequest=new LoginRequest();
-//		loginRequest.setUsername("admin1");
-//		loginRequest.setPassword("123456789");
-//
-//		System.out.println(authController.authenticateUser(loginRequest).getBody());
+Customers customers=new Customers();
+customers.setEmail("testemail@gmail.com");
+customers.setPassword("1234");
+customerService.createCustomer(customers);
 	}
 
 }
